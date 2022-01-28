@@ -28,7 +28,7 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-Once this is done you can install all packages using `requirement.txt`
+Once this is done you can install all packages using `requirements.txt`
 ```python
 pip install -r requirements.txt
 ```
