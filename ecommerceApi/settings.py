@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from .ec2_check import get_linux_ec2_private_ip
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +27,12 @@ SECRET_KEY = 'e2p0bl5+=(*7_^!q$-sdil6xnj@)gd_tta(^(ihjd48fr1p6_u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+private_ip = get_linux_ec2_private_ip()
+if private_ip:
+    ALLOWED_HOSTS.append(private_ip)
+
 
 
 # Application definition
