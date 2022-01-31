@@ -86,12 +86,13 @@ DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ecommerceapi',
-        'USER': 'ecommerceapi',
-        'PASSWORD': 'anita63',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'defaultdb',
+        'USER': 'doadmin',
+        'PASSWORD': 'n64uTS15FxmtdE0v',
+        'HOST': 'db-postgresql-lon1-64731-do-user-8782499-0.b.db.ondigitalocean.com',
+        'PORT': '25060',
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 
