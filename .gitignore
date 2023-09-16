@@ -1,5 +1,6 @@
-
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+*.pyc
+__pycache__
+db.sqlite3
+/env
+*.env
+.vscode

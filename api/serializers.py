@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from . models import Category, Book, Product
+from . models import Category, Book, Grocery, Clothing
 
 class CategorySerializer(serializers.ModelSerializer):
     
@@ -29,10 +29,9 @@ class BookSerializer(serializers.ModelSerializer):
         )
         model = Book
 
-class ProductSerializer(serializers.ModelSerializer):
+class GrocerySerializer(serializers.ModelSerializer):
     class Meta:
         fields=(
-            'product_tag',
             'name',
             'category',
             'price',
@@ -41,4 +40,24 @@ class ProductSerializer(serializers.ModelSerializer):
             'status',
             'date_created',
         )
-        model = Product
+        model = Grocery
+
+
+class ClothingSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields=(
+            'clothes',
+            'category',
+            'price',
+            'color',
+            'quantity',
+            'size',
+            'imageurl',
+            'status',
+            'date_created',
+        )
+        model = Clothing
+
+
+
+
